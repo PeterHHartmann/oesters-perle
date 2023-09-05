@@ -1,0 +1,44 @@
+body {
+
+}
+
+.oyster-container {
+  width: 1000px;
+  height: 500px;
+  outline: 1px solid black;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  margin-block: auto;
+}
+
+svg .shellShadow {
+  translate: 23% 65%;
+}
+
+svg .shellBottom{
+  translate: 25% 60%;
+}
+
+svg .shellTop {
+  translate: 25% 57%;
+  transform-origin: 57% 25%;
+  rotate: 0deg;
+  animation: open 12s ease forwards infinite;
+}
+
+@keyframes open {
+
+  10% {
+    rotate: 0deg;
+    translate: 25% 57%;
+  }
+
+  20%, 100% {
+    rotate: 35deg;
+    translate: 25% 70%;
+  }
+}
