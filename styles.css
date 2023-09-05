@@ -5,7 +5,6 @@ body {
 .oyster-container {
   width: 1000px;
   height: 500px;
-  outline: 1px solid black;
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -16,29 +15,31 @@ svg {
 }
 
 svg .shellShadow {
-  translate: 23% 65%;
+  transform: translate(73%, 92%);
 }
 
 svg .shellBottom{
-  translate: 25% 60%;
+  transform: translate(25%, 60%);
 }
 
 svg .shellTop {
-  translate: 25% 57%;
   transform-origin: 57% 25%;
-  rotate: 0deg;
-  animation: open 12s ease forwards infinite;
+  transform: translate(25%, 57%) rotate(0deg);
+  animation-name: open;
+  animation-duration: 8s;
+  animation-delay: 4s;
+  animation-timing-function: cubic-bezier(0.68, -0.15, 0.265, 1.55);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes open {
 
   10% {
-    rotate: 0deg;
-    translate: 25% 57%;
+    transform: translate(25%, 57%) rotate(0deg);
   }
 
   20%, 100% {
-    rotate: 35deg;
-    translate: 25% 70%;
+    transform: translate(25%, 70%) rotate(35deg);
   }
 }
